@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:function_trace20220914/ui_components/rounded_flat_text_button.dart';
 
@@ -9,6 +10,8 @@ class SetStateLoadingPage extends StatefulWidget {
 }
 
 class _SetStateLoadingPageState extends State<SetStateLoadingPage> {
+  bool _isLoading = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,10 +21,17 @@ class _SetStateLoadingPageState extends State<SetStateLoadingPage> {
           child: Column(
             children: [
               const Spacer(),
-              const CircularProgressIndicator(),
+              if (_isLoading)
+                const CupertinoActivityIndicator(
+                  radius: 24.0,
+                ),
               const Spacer(),
               RoundedFlatTextButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    _isLoading = !_isLoading;
+                  });
+                },
                 child: const Text('ローディング'),
               ),
               const SizedBox(height: 16.0),
