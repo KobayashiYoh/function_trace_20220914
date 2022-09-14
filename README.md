@@ -1,16 +1,6 @@
 # function_trace20220914
 
-A new Flutter project.
+ローディングの切り替えをsetStateとRiverpodの2種類で実装
 
-## Getting Started
+https://user-images.githubusercontent.com/82624334/190089986-1ae36c70-a03f-42bf-9185-f4359f884d2b.mov
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
