@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:function_trace20220914/pages/riverpod_loading_page.dart';
 import 'package:function_trace20220914/pages/set_state_loading_page.dart';
 import 'package:function_trace20220914/ui_components/rounded_flat_text_button.dart';
 
@@ -35,7 +36,15 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 16.0),
               RoundedFlatTextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          const RiverpodLoadingPage(),
+                    ),
+                  );
+                },
                 child: const Text('ローディング機能（Riverpod）'),
               ),
             ],
